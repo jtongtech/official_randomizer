@@ -2,6 +2,7 @@ require 'sinatra'
 require_relative 'random_pair.rb'
 require_relative 'formatter.rb'
 
+
 get '/' do
     erb :get_names
 end
