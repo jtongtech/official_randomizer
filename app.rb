@@ -19,9 +19,8 @@ end
 
 post '/names' do
     names = params[:user_names]
-    # monkey = names.to_s
     results = randomizer(names)
-    results
+    "results are #{results}"
 end
   
 
