@@ -23,6 +23,13 @@ post '/names' do
     "results are #{results}"
 end
   
+get '/contact' do
+	erb :contact
+end
+
+get '/about' do
+	erb :about
+end
 
 # get '/' do
 #     erb :get_names
