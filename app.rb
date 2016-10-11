@@ -18,11 +18,11 @@ get '/get_names?' do
 end
 
 post '/names' do
-    names = params[:user_names].split.map(&:capitalize).join(' ')
-    random_names_array = randomizer(names)
-    name_pairs = fix(random_names_array)
-    erb :get_names_again, :locals => {:name_pairs => name_pairs}
+    array = params[:user_names]
+    results = name_array(array)
+    results
 end
+  
 
 # get '/' do
 #     erb :get_names
