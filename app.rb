@@ -4,17 +4,17 @@ require_relative 'formatter.rb'
 
 
 get '/' do
-    quantity = params[quantity]
-    erb :number_students, :locals => {:quantity => quantity}
+    erb :number_students
 end
 
 post '/number_of_students' do
-    quantity = params[quantity]
+    quantity = params[:quantity]
     erb :get_names, :locals => {:quantity => quantity}
 end
 
 get '/get_names?' do
-    erb :get_names
+    quantity = params[:quantity]
+    erb :get_names, :locals => {:quantity => quantity}
 end
 
 post '/names' do
@@ -27,3 +27,15 @@ end
 # get '/' do
 #     erb :get_names
 # end
+
+# <form method = "post" action = "names">
+# 	<input type = "text" autofocus="autofocus" name = "user_names">
+# 	<input type = "submit">
+# </form>
+
+# <form method = "post" action = "names">
+# <%quantity.to_i.times do %>
+# 	<input type = "text" name = "usernames[]">
+# <%end%>
+# 	<input type = submit value = "Submit Names">
+# 	</form>
