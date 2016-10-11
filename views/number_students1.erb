@@ -10,7 +10,8 @@ function myFunction() {
     var x = document.getElementById("myInput").value;
     var y = "";
     for (i = 0; i < x; i++) {
-        y += x;
+        document.createElement("INPUT");
+x.setAttribute("type", "text");
     }
     //var y = is equivelent to y = 
     document.getElementById("demo").innerHTML = "Enter their names in the boxes below: " + y;
@@ -18,11 +19,3 @@ function myFunction() {
 
 </script>
 
-
-<!<form method = "post" action = "names">
-<!<%quantity.to_i.times do%>
-<!<input type = "text" name = "user_names[]">
-<!<%end%>
-<!<br>
-<!<input type = "submit">
-<!</form>
