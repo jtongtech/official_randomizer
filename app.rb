@@ -4,8 +4,16 @@ require_relative 'formatter.rb'
 
 
 get '/' do
-    erb :get_names
+    quantity = params[quantity]
+    erb :number_students, :locals => {:quantity => quantity}
 end
+
+post 'number_students' do
+    quantity = params[quantity]
+    erb :number_students, :locals => {:quantity => quantity}
+    redirect '/get_names?quantity' + quantity
+end
+
 
 post '/names' do
     names = params[:user_names].split.map(&:capitalize).join(' ')
