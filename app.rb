@@ -18,8 +18,9 @@ get '/get_names?' do
 end
 
 post '/names' do
-    array = params[:user_names]
-    results = name_array(array)
+    names = params[:user_names]
+    # monkey = names.to_s
+    results = randomizer(names)
     results
 end
   
