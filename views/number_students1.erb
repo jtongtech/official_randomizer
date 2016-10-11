@@ -8,6 +8,12 @@
 <script>
 function myFunction() {
     var x = document.getElementById("myInput").value;
-    document.getElementById("demo").innerHTML = "Enter their names in the boxes below: " + x;
+    var y = "";
+    for (i = 0; i < x; i++) {
+        y += x;
+    }
+    //var y = is equivelent to y = 
+    document.getElementById("demo").innerHTML = "Enter their names in the boxes below: " + y;
 }
+
 </script>
