@@ -4,7 +4,7 @@ require_relative 'formatter.rb'
 
 
 get '/' do
-    erb :number_students
+    erb :number_students1
 end
 
 post '/number_of_students' do
