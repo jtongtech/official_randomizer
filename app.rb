@@ -8,12 +8,14 @@ get '/' do
     erb :number_students, :locals => {:quantity => quantity}
 end
 
-post 'number_students' do
+post '/number_of_students' do
     quantity = params[quantity]
-    erb :number_students, :locals => {:quantity => quantity}
-    redirect '/get_names?quantity' + quantity
+    erb :get_names, :locals => {:quantity => quantity}
 end
 
+get '/get_names?' do
+    erb :get_names
+end
 
 post '/names' do
     names = params[:user_names].split.map(&:capitalize).join(' ')
