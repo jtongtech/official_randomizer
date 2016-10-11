@@ -13,3 +13,7 @@ post '/names' do
     name_pairs = fix(random_names_array)
     erb :get_names_again, :locals => {:name_pairs => name_pairs}
 end
+
+# get '/' do
+#     erb :get_names
+# end
