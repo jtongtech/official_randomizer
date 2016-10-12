@@ -7,3 +7,5 @@ get '/' do
     erb :number_students1
 end
 
+# document.createElement("INPUT");
+# x.setAttribute("type", "text");
