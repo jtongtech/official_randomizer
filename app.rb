@@ -17,6 +17,7 @@ end
 
 post '/names' do
     names = params[:user_names]
+    puts params
     results = randomizer(names)
     "results are #{results}"
 end
