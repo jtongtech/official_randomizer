@@ -1,3 +1,5 @@
+<link rel="stylesheet" href = "css/style.css">
+
 
 <center><p>How many people are in class today?</p>
 
@@ -13,12 +15,13 @@ function myFunction() {
     //var y = is equivelent to y = 
     document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br> ";
 
-for (var i = 1; i <= x; i++){
-var input = document.createElement("input");
-// var c = document.body.children;
-input.type = "text";
-input.name = "text" + i + " "; //names the element
-document.getElementById("demo").appendChild(input).value;
+    for (var i = 1; i <= x; i++){
+    var input = document.createElement("input");
+    // var c = document.body.children;
+    input.type = "text";
+    input.name = "text" + i; //names the element
+    input.id = "marv";
+    document.getElementById("demo").appendChild(input).value;
 
 // i wants to make the contents of boxes to an array of strings called by variable
 

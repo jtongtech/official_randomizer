@@ -11,8 +11,6 @@ img {display: block; margin: auto; width: 40%;}
 /*the above line ceters the images*/
 
 .footer {position: absolute; right: 0; bottom: 0; left: 0; padding: 1rem; background-color: whitesmoke; text-align: center;}
-.newspaper {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
+#marv {
+  display: block;
 }
