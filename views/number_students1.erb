@@ -9,18 +9,15 @@
 <script>
 function myFunction() {
     var x = document.getElementById("myInput").value;
-    var y = "";
-    for (i = 0; i < x; i++) {
-    
-    }
+    for (i = 0; i < x; i++)
     //var y = is equivelent to y = 
-    document.getElementById("demo").innerHTML = "Enter their names in the boxes below: " + y;
+    document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br> ";
 
 for (var i = 1; i <= x; i++){
 var input = document.createElement("input");
 // var c = document.body.children;
 input.type = "text";
-input.name = "text" + i; //names the element
+input.name = "text" + i + " "; //names the element
 document.getElementById("demo").appendChild(input).value;
 
 // i wants to make the contents of boxes to an array of strings called by variable
