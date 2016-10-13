@@ -1,5 +1,5 @@
 require 'sinatra'
-# require_relative 'random_pair.rb'
+require_relative 'random_pair.rb'
 # require_relative 'formatter.rb'
 
 
@@ -16,7 +16,7 @@ get '/get_names?' do
 end
 
 post '/names' do
-    names = params[:user_names]
+    names = params.values
     puts params
     results = randomizer(names)
     "results are #{results}"
