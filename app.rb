@@ -16,7 +16,7 @@ get '/get_names?' do
 end
 
 post '/names' do
-    names = params.values
+    names = params.values # and this calls the value out of the hash it creates
     puts params
     results = randomizer(names)
     "results are #{results}"
