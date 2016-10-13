@@ -8,13 +8,11 @@ get '/' do
 end
 
 post '/number_of_students' do
-    quantity = params[:quantity]
-    erb :get_names, :locals => {:quantity => quantity}
+    erb :get_names 
 end
 
 get '/get_names?' do
-    quantity = params[:quantity]
-    erb :get_names, :locals => {:quantity => quantity}
+    erb :get_names
 end
 
 post '/names' do
