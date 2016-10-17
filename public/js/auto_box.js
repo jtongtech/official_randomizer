@@ -13,8 +13,26 @@ function myFunction() {
     input.required = true;
     document.getElementById("demo").appendChild(input).value;
 
+
+
 // i wants to make the contents of boxes to an array of strings called by variable
 
 }
  
+}
+
+function myFunction2() {
+    var x = document.getElementById("myInput").value;
+    for (i = 0; i < x; i++)
+
+
+    for (var i = 1; i <= x; i++){
+    var input = document.createElement("input");
+    // var c = document.body.children;
+    input.type = "text";
+    input.name = "text" + i; //names the element
+    input.id = "marv";
+    input.required = true;
+    document.getElementById("demo").appendChild(input).value;
+
 }

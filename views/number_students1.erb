@@ -3,14 +3,14 @@
 
 <center><p>How many people are in class today?</p>
 
-<input type="nubmer" id="myInput" oninput="myFunction()"  min="3">
+<input type="nubmer" id="myInput" min="3" oninput="myFunction()">
 <form method = "post" action = "names" id= "text_box">
 <p id="demo"></p>
 
 <script src = "js/auto_box.js"></script>
 
-<center><p>If you would like to add more people to the list,<br> click the plus sign</p><br>
-<input type='button' value='+' class='qtyplus' field='quantity' />
+<p>If you would like to add more people to the list,<br> click the plus sign</p><br>
+<input type='button' value='+' class='qtyplus' field='quantity' onclick="myFunction2()" />
 <br>
 <br>
 <input type = "submit">
