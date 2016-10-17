@@ -1,6 +1,6 @@
-def fix(names)
+def fix(results)
     group = ""
-    names.each do |pair|
+    results.each do |pair|
         if pair.include? (pair[2])
             group << pair[0] + ", " + pair[1] + ", and " + pair[2] + "<br>"
         else
