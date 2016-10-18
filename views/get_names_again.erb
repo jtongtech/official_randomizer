@@ -1,14 +1,28 @@
-Your parings are listed below.<br>
+Here is your randomly paired list:<br>
 <br>
-If you have another list to pair, feel free to do so at the bottome of the page.<br>
+<%= random_pairs %>
 <br>
-<%= name_pairs %>
+Do you have another list of names to pair?<br>
 <br>
-<br>
-Example of list entry: John, Mark, Adam...
-<form method = "post" action = "names">
-	<input type = "text" autofocus="autofocus" name = "user_names">
-	<input type = "submit">
-</form>
+How many names are on your list?<br>
+<form method = "post" action = "names" id= "text_box">
+    <input type="text" autofocus = "autofocus" id="myInput" oninput="myFunction()" >
+    <p id="demo"></p>
+    <br>
+    <input type = "submit">
+</form></center>
 
-lyle, jacob, jeremy, ysabele, lotfi, cyndi, don, stephanie, susan, adam, mike, maxx, john
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput").value;
+        var y = "";
+        for (i = 0; i < x; i++) 
+        document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br>";
+            for (var i = 1; i <= x; i++){
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "text" + i;
+            document.getElementById("demo").appendChild(input).value;
+            }
+    }
+</script>
