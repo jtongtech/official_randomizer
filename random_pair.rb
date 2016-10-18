@@ -1,8 +1,15 @@
-# ["lyle", "jacob", "jeremy", "ysabele", "lotfi", "cyndi", "don", "stephanie", "susan", "adam", "mike", "maxx", "john"]
+def random_pair(names)
+    names_list = cap_names(names)
+    random_names_array = randomizer(names_list)
+    name_pairs = fix(random_names_array)
+    name_pairs
+end
 
-### This is the work everyone just stole form me ###
+def cap_names(caps)
+    caps = caps.map(&:capitalize)
+end
+
 def randomizer(names)
-    #names_array = names.split(",")
     shuffled = names.shuffle
     sliced = shuffled.each_slice(2).to_a
     if shuffled.length % 2 == 1
@@ -12,4 +19,16 @@ def randomizer(names)
     else
         sliced
     end
+end
+
+def fix(names)
+    group = ""
+    names.each do |pair|
+        if pair.include? (pair[2])
+            group << pair[0] + ", " + pair[1] + ", and " + pair[2] + "<br>"
+        else
+            group << pair[0] + " and " + pair[1] + "<br>"
+        end
+    end
+    group
 end
